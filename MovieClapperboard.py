@@ -111,7 +111,7 @@ class Clapperboard:
         obj.addProperty('App::PropertyInteger', 'Frame_03Height', 'Frames config',  QT_TRANSLATE_NOOP('App::Property',
                                              'Height of frames of the Clapperboard animation. '
                                              'Only valid for “R1“ frames.'
-                                             'Configure the heigth in pixels of the created frames.')).Frame_03Height = 600
+                                             'Configure the height in pixels of the created frames.')).Frame_03Height = 600
         obj.addProperty('App::PropertyPath', 'Frame_04OutputPath', 'Frames config',  QT_TRANSLATE_NOOP('App::Property',
                                              'Output path of the Clapperboard animation. '
                                              'Indicate the output folder to save “R1“ or “R2“ frames.')).Frame_04OutputPath = ""
@@ -431,7 +431,7 @@ def createVideo():
     Heightframe1, Widthframe1 = size1
 
     fps = CL.Video_05Fps
-    # Output video name, fourcc, fps, size (heigth, width)
+    # Output video name, fourcc, fps, size (height, width)
     video = cv2.VideoWriter(outVideoFullPath, cv2_fourcc, fps, (Widthframe1, Heightframe1))
 
     for i in range(len(frames)):
@@ -465,8 +465,8 @@ def playVideo():
         #message2 = (translate('Movie', 'Movie at {} fps, press q to stop the video').format(fps2))
 
     while cap.isOpened():
-        sucess, frame = cap.read()
-        if sucess == True:
+        success, frame = cap.read()
+        if success == True:
             time.sleep(1/fps2)
             cv2.imshow(message2, frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):

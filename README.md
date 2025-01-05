@@ -45,7 +45,7 @@ The Movie Workbench icon
 ##### Via Addon Manager (Recommended)
 
 - Menu Tools > Addon Manager
-- Locating Movie Worbench and installing it
+- Locating Movie Workbench and installing it
 - Restart FreeCAD
    
 
